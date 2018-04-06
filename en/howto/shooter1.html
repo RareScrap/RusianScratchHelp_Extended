@@ -1,0 +1,125 @@
+<html>
+   <head>
+      <meta charset=utf-8>
+      <link href=../../static/css/base.css rel=stylesheet>
+      <link href=../../static/css/modules/bootstrap-accordion.css rel=stylesheet>
+      <link href=../../static/css/pages/help.css rel=stylesheet>
+      <link href=../../static/css/modules/tabs.css rel=stylesheet>
+      <link href=../../static/css/modules/icons.css rel=stylesheet>
+      <link href=../../static/css/pages/tips.css rel=stylesheet>
+      <link href=../../static/css/modules/tip-bar.css rel=stylesheet>
+      <script type=text/javascript src=../../static/js/jquery.min.js></script>
+   </head>
+   <body id=tips-standalone class>
+      <div id=tip-content>
+         <div class=multi-step>
+            <div class="progress-bar in-progress"> <span id=tip-progress-bar style=width:10%></span> </div>
+            <div class=tutorial-dropdown-menu-bar>
+               <h3 class=tutorial-menu-name> <a href=shooter-intro.html>Создаем стрелялку</a> </h3>
+               <div class=tutorial-dropdown-menu>
+                  <nav>
+                     <a href=#.html id=tutorial-menu-icon class=dropdown-closed></a>
+                     <ul style=display:none;>
+                        <li class=page-link>
+                           <a href=vptip1.html>
+                              <div class="index-num active">1</div>
+                              Нарисуем оружие
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter2.html>
+                              <div class="index-num ">2</div>
+                              Добавим оружие к котенку
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter3.html>
+                              <div class="index-num ">3</div>
+                              Нарисуем пулю
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter4.html>
+                              <div class="index-num ">4</div>
+                              Запрограммируем стрельбу пули
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter5.html>
+                              <div class="index-num ">5</div>
+                              Превращаем оружие в пулемет
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter6.html>
+                              <div class="index-num ">6</div>
+                              Добавляем врага
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter7.html>
+                              <div class="index-num ">7</div>
+                              Изменяем размер врага
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter8.html>
+                              <div class="index-num ">8</div>
+                              Создаем армию врагов
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=vptip9.html>
+                              <div class="index-num ">9</div>
+                              Monitor Your Pet
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=vptip10.html>
+                              <div class="index-num ">10</div>
+                              Share Your Pet
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+            <div class=navcenter> <span class="navigate back"> <a href=shooter-intro.html><img src=../../static/images/help/tip-arrow-back.png>Назад</a> </span> <span class="navigate next"> <a href=shooter2.html> Дальше <img src=../../static/images/help/tip-arrow-forward.png> </a> </span> </div>
+            <h2>Нарисуем оружие</h2>
+            <div class=steps>
+               <p>Нажмите на иконку <img class=intext src=../../static/images/help/10c-sprite.png> чтобы создать новый спрайт, в котором мы будем рисовать автомат</p>
+               <p><img src=../../static/images/help/draw-new-sprite.gif></p>
+               <p>Затем, нарисуем оружие. Необязательно рисовать точно такое же, можете придумать оружие сами.</p>
+               <p><img src=../../static/images/help/shooter-s1-i1.gif></p>
+               <spanp class=reminder>Если вам не понятно, как рисовать, посмотрите урок "Рисование"</spanp>
+            </div>
+            <div class="steps last">
+               <a class=next-step-button href=shooter2.html>Дальше, добавим оружие к котенку</a>
+            </div>
+            <div class=scroll-gradient></div>
+         </div>
+      </div>
+      <script type=text/javascript>
+         var Scratch = Scratch || {};
+         Scratch.INIT_DATA = Scratch.INIT_DATA || {};
+         Scratch.INIT_DATA.COI = {
+           TARGET_DOMAIN: "http://scratch.mit.edu"
+         };
+      </script> <script type=text/javascript src=../../static/js/lib/json2.js></script> <script type=text/javascript src=../../static/js/lib/underscore-min.js></script> <script type=text/javascript src=../../static/js/lib/backbone-min.js></script> <script type=text/javascript src=../../static/js/bootstrap-accordion.js></script> <script type=text/javascript src=../../static/js/bootstrap-tab.js></script> <script type=text/javascript src=../../static/js/views/backbone-extensions.js></script> <script type=text/javascript src=../../static/js/views/cross-origin-interface.js></script> <script type=text/javascript src=../../static/js/views/tips.js></script> <script type=text/javascript>
+         /* Initialize progress bar and navcenter translation */
+         $(function($){
+           $(document).on('click', '#tutorial-menu-icon', function() {
+               $('.tutorial-dropdown-menu nav ul').toggle();
+               if ($('#tutorial-menu-icon').hasClass('dropdown-opened')) {
+                   $('#tutorial-menu-icon').removeClass('dropdown-opened');
+                   $('#tutorial-menu-icon').addClass('dropdown-closed');
+               } else {
+                   $('#tutorial-menu-icon').removeClass('dropdown-closed');
+                   $('#tutorial-menu-icon').addClass('dropdown-opened');
+               }
+           })
+         });
+      </script>
+   </body>
+</html>
+

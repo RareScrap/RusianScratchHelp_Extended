@@ -1,0 +1,171 @@
+<html>
+   <head>
+      <meta charset=utf-8>
+      <link href=../../static/css/base.css rel=stylesheet>
+      <link href=../../static/css/modules/bootstrap-accordion.css rel=stylesheet>
+      <link href=../../static/css/pages/help.css rel=stylesheet>
+      <link href=../../static/css/modules/tabs.css rel=stylesheet>
+      <link href=../../static/css/modules/icons.css rel=stylesheet>
+      <link href=../../static/css/pages/tips.css rel=stylesheet>
+      <link href=../../static/css/modules/tip-bar.css rel=stylesheet>
+      <script type=text/javascript src=../../static/js/jquery.min.js></script>
+   </head>
+   <body id=tips-standalone class>
+      <div id=tip-content>
+         <div class=multi-step>
+            <div class="progress-bar in-progress"> <span id=tip-progress-bar style=width:10%></span> </div>
+            <div class=tutorial-dropdown-menu-bar>
+               <h3 class=tutorial-menu-name> <a href=shooter-intro.html>Создаем стрелялку</a> </h3>
+               <div class=tutorial-dropdown-menu>
+                  <nav>
+                     <a href=#.html id=tutorial-menu-icon class=dropdown-closed></a>
+                     <ul style=display:none;>
+                        <li class=page-link>
+                           <a href=vptip1.html>
+                              <div class="index-num active">1</div>
+                              Нарисуем оружие
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter2.html>
+                              <div class="index-num ">2</div>
+                              Добавим оружие к котенку
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter3.html>
+                              <div class="index-num ">3</div>
+                              Нарисуем пулю
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter4.html>
+                              <div class="index-num ">4</div>
+                              Запрограммируем стрельбу пули
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter5.html>
+                              <div class="index-num ">5</div>
+                              Превращаем оружие в пулемет
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter6.html>
+                              <div class="index-num ">6</div>
+                              Добавляем врага
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter7.html>
+                              <div class="index-num ">7</div>
+                              Изменяем размер врага
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter8.html>
+                              <div class="index-num ">8</div>
+                              Создаем армию врагов
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=vptip9.html>
+                              <div class="index-num ">9</div>
+                              Monitor Your Pet
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=vptip10.html>
+                              <div class="index-num ">10</div>
+                              Share Your Pet
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+            <div class=navcenter> <span class="navigate back"> <a href=shooter5.html><img src=../../static/images/help/tip-arrow-back.png>Назад</a></div>
+            <h2>Добавляем врага</h2>
+            <div class=steps>
+				<p>Зачем нам рисовать врага самому, если он уже нарисован? Нажмите на <img src=../../static/images/help/10b-sprite.png>, чтобы выбрать спрайт из библиотеки стандартных спрайтов.</p>
+				<img src=../../static/images/help/shooter-s6-i1.png width="291">
+
+				<p>Отроется меню, где вы можете выбрать любой понравившийся спрайт и добавить его в вашу игру. Найдите и нажмите на летучую мышь, а затем на кнопку ОК</p>
+				<img src=../../static/images/help/shooter-s6-i2.png width="291">
+
+				<p>Затем кликните на спрайт летучей мыши и выберите вкладку "Скрипты", чтобы начать писать код для летучей мыши</p>
+				<img src=../../static/images/help/shooter-s6-i3.png width="291">
+
+				<p>А теперь давайте подумаем, что должен делать враг?</p>
+				 <ol>
+				  <li>Приближаться к котенку</li>
+				  <li>Умирать (исчезать), если в него попадет пуля</li>
+				  <li>Должен появляться где угодно и нападать откуда угодно, как самый настоящий враг</li>
+				</ol>
+
+				<p>Решим эти задачи поочереди:</p>
+				<p>Шаг1: Приближение состоит из двух частей - нужно повернуться к нашему котенку, а потом идти. Причем делать это нужно всегда, ведь котенок может куда-нибудь уйти. Тогда наш враг должен быть вкурсе, что котенок убегает и врагу нужно будет бежать в другое место (туда где котенок сейчас). Давайте запрограммируем это!</p>
+				<img src=../../static/images/help/shooter-s6-i4.png>
+				<p>Теперь наш враг ВСЕГДА будет ПОВОРАЧИВАТЬСЯ К Спрайту2 (это наше котенок) и ИДТИ 10 ШАГОВ к нему. Как видите, код программы повторяет те же самые слова, что мы только что сказали.</p>
+
+
+				<p>Шаг 2: Чтобы враг понял, что его убили, он должен проверять, коснулся ли он кнопки или нет. Как в помните, проверка на касание состоит из блока ЕСЛИ и блока КАСАЕТСЯ из категории "сенсоры". Причем ЕСЛИ должно обязательно лежать в цикле ВСЕГДА, чтобы враг мог быть убитым в любую минуту.</p>
+
+				<div class=accordion id=vptip-menu-accordion>
+               <div class=accordion-group>
+                  <h3 class="accordion-heading collapsed" data-toggle=collapse data-parent=#vptip-menu-accordion data-target=.step-index>Зачем класть ЕСЛИ во ВСЕГДА?</h3>
+                  <div class="step-index accordion-body collapse">
+                     <ul class=inner>
+						<p>Некоторые проверки (так мы будем называть код, который что-то проверяет: например касание) должны выполняться не только во время запуска кода, а постоянно. Если мы уберем блок ВСЕГДА, то врага нельзя будет убить. Его можно будет убить, если он с самого начала появится на пуле. Так происходит из-за того, что проверка на касание происходит всего один раз, а после того, как она закончилась, врагу уже неважно попали мы по нему или нет. Чтобы такого не было, мы используем блок ВСЕГДА, чтобы он всегда проверял, попала по нему пуля или нет. Но помните, что не все проверки должн лежать в блоке всегда. Ваша голова как раз и подскажет вам как лучше сделать :)</p>
+                     </ul>
+                  </div>
+               </div>
+
+               <p>Код, который мы уже написали, уже имеет цикл всегда, так что мы можем сделать вот так:</p>
+               <img src=../../static/images/help/shooter-s6-i5.png>
+               <p>Вы уже наверняка догадались, что мы будем использовать клоны... Врагов должно же быть много, правда ведь? А раз мы написали код, где клон удаляется, значит он где-то должен и создаваться. Давайте сделаем так, чтобы клон врага создавался каждую секунду. Для этого придется немного изменить наш код.</p>
+				<img src=../../static/images/help/shooter-s6-i6.png>
+
+				<p>Шаг 3: Чтобы добавить интерес нашей игре, сделаем так, чтобы враг мог появляться неожиданно! То есть где угодно. Но как это сделать? Как сказать врагу где именно появиться. Для таких целей существует 2 специальных числа - икс (X) и игрек (Y). Эти два числа называются координатами и точно показывают где находится спрайт. И клон, и спрайты имеют свои координаты. Вы можете посмотреть их в правом верхнем углу экрана</p>
+				<img src=../../static/images/help/shooter-s6-i7.png>
+				<p><spanp class=reminder>Чтобы узнать больше о координатах, пройдите урок "Координаты"</spanp></p>
+				<p>Мы сделаем так, чтобы клон врага появлялся в любом месте на нашем экране. Чтобы такое сделать, нам понадобится блок УСТАНОВИТЬ X и УСТАНОВИТЬ Y</p>
+				<img src=../../static/images/help/shooter-s6-i8.png>
+				<p>Но для того, чтобы враг появлялся где угодно, его X и Y каждый раз должны быть разными. То есть, случайными. Чтобы такое сделать, найдите блок ВЫДАТЬ СЛУЧАЙНОЕ ЧИСЛО в категории операторов и выставите ему следующие значения</p>
+				<img src=../../static/images/help/shooter-s6-i9.png>
+				<p>Эти таинственные числа - ширина и высота нашего экрана. Почему они такие? Об этом вы можете прочитать в уроке "Координаты", а пока, просто добавим их к нашим блокам (только не перепутайте!)/p>
+				<img src=../../static/images/help/shooter-s6-i10.png width="291">
+
+				<p>И последнее, чтобы спрятать спрайта-родителя, спрячем его при старте нашей игры, но будем показывать при каждом создании клона. А то без этого на экране будет летучая мышь, которая не будет двигаться.</p>
+				<img src=../../static/images/help/shooter-s6-i11.png width="291">
+
+				<p><strong>ВОТ И ВСЕ!</strong> Мы закончили создавать нашу стрелялку. Теперь вы научились создавать клоны, показывать их где-угодно, делать проверки на касания и много чего еще. Настоло время немного пострелять :)</p>
+            </div>
+
+            <div class=scroll-gradient></div>
+         </div>
+      </div>
+      <script type=text/javascript>
+         var Scratch = Scratch || {};
+         Scratch.INIT_DATA = Scratch.INIT_DATA || {};
+         Scratch.INIT_DATA.COI = {
+           TARGET_DOMAIN: "http://scratch.mit.edu"
+         };
+      </script> <script type=text/javascript src=../../static/js/lib/json2.js></script> <script type=text/javascript src=../../static/js/lib/underscore-min.js></script> <script type=text/javascript src=../../static/js/lib/backbone-min.js></script> <script type=text/javascript src=../../static/js/bootstrap-accordion.js></script> <script type=text/javascript src=../../static/js/bootstrap-tab.js></script> <script type=text/javascript src=../../static/js/views/backbone-extensions.js></script> <script type=text/javascript src=../../static/js/views/cross-origin-interface.js></script> <script type=text/javascript src=../../static/js/views/tips.js></script> <script type=text/javascript>
+         /* Initialize progress bar and navcenter translation */
+         $(function($){
+           $(document).on('click', '#tutorial-menu-icon', function() {
+               $('.tutorial-dropdown-menu nav ul').toggle();
+               if ($('#tutorial-menu-icon').hasClass('dropdown-opened')) {
+                   $('#tutorial-menu-icon').removeClass('dropdown-opened');
+                   $('#tutorial-menu-icon').addClass('dropdown-closed');
+               } else {
+                   $('#tutorial-menu-icon').removeClass('dropdown-closed');
+                   $('#tutorial-menu-icon').addClass('dropdown-opened');
+               }
+           })
+         });
+      </script>
+   </body>
+</html>
+

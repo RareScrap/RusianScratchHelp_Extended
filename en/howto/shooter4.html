@@ -1,0 +1,169 @@
+<html>
+   <head>
+      <meta charset=utf-8>
+      <link href=../../static/css/base.css rel=stylesheet>
+      <link href=../../static/css/modules/bootstrap-accordion.css rel=stylesheet>
+      <link href=../../static/css/pages/help.css rel=stylesheet>
+      <link href=../../static/css/modules/tabs.css rel=stylesheet>
+      <link href=../../static/css/modules/icons.css rel=stylesheet>
+      <link href=../../static/css/pages/tips.css rel=stylesheet>
+      <link href=../../static/css/modules/tip-bar.css rel=stylesheet>
+      <script type=text/javascript src=../../static/js/jquery.min.js></script>
+   </head>
+   <body id=tips-standalone class>
+      <div id=tip-content>
+         <div class=multi-step>
+            <div class="progress-bar in-progress"> <span id=tip-progress-bar style=width:10%></span> </div>
+            <div class=tutorial-dropdown-menu-bar>
+               <h3 class=tutorial-menu-name> <a href=shooter-intro.html>Создаем стрелялку</a> </h3>
+               <div class=tutorial-dropdown-menu>
+                  <nav>
+                     <a href=#.html id=tutorial-menu-icon class=dropdown-closed></a>
+                     <ul style=display:none;>
+                        <li class=page-link>
+                           <a href=vptip1.html>
+                              <div class="index-num active">1</div>
+                              Нарисуем оружие
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter2.html>
+                              <div class="index-num ">2</div>
+                              Добавим оружие к котенку
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter3.html>
+                              <div class="index-num ">3</div>
+                              Нарисуем пулю
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter4.html>
+                              <div class="index-num ">4</div>
+                              Запрограммируем стрельбу пули
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter5.html>
+                              <div class="index-num ">5</div>
+                              Превращаем оружие в пулемет
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter6.html>
+                              <div class="index-num ">6</div>
+                              Добавляем врага
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter7.html>
+                              <div class="index-num ">7</div>
+                              Изменяем размер врага
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter8.html>
+                              <div class="index-num ">8</div>
+                              Создаем армию врагов
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=vptip9.html>
+                              <div class="index-num ">9</div>
+                              Monitor Your Pet
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=vptip10.html>
+                              <div class="index-num ">10</div>
+                              Share Your Pet
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+            <div class=navcenter> <span class="navigate back"> <a href=shooter3.html><img src=../../static/images/help/tip-arrow-back.png>Назад</a> </span> <span class="navigate next"> <a href=shooter5.html> Дальше <img src=../../static/images/help/tip-arrow-forward.png> </a> </span> </div>
+            <h2>Запрограммируем стрельбу пули</h2>
+            <div class=steps>
+               <p>Сделаем так, чтобы пуля вылетала из автомата, когда мы будем нажимать на кнопку ПРОБЕЛ. Чтобы наша программа могла понять, нажата ли клавиша пробел или нет, нам следует добавить блок "Когда клавиша нажата"</p>
+				<p><img src=../../static/images/help/shooter-s4-i1.gif></p>
+
+				<p>Теперь давайте подумаем, что представляет из себя процесс стрельбы. Если внимательно примотреться, то можно разбить его на маленькие шаги:</p>
+				<ol>
+					<li>Пуля заряжается в ствол автомата</li>
+					<li>Пуля поворачивается туда же, куда повернут котенок (это нужно, чтобы пуля летела именно туда, куда смотрит кот)</li>
+					<li>Пуля начинает свое движение, и движется пока не встретит край экрана</li>
+				</ol>
+
+				<div class=accordion id=vptip-menu-accordion>
+               <div class=accordion-group>
+                  <h3 class="accordion-heading collapsed" data-toggle=collapse data-parent=#vptip-menu-accordion data-target=.step-index>Полезный совет! (тык)</h3>
+                  <div class="step-index accordion-body collapse">
+                     <ul class=inner>
+						<p>Программирование - сложное занятие и иногда вам требуется решить задачу, которую вы вообще не представляет как решить. Постарайтесь разложить сложную задачку на маленькие и понятные шаги. Затем спрограммируйте их по отдельности и соедините в одну программу. Такой подход позволит вам быстро решать сложные и непонятные задачи не только в программировании, но и в жизни.</p>
+                     </ul>
+                  </div>
+               </div>
+
+				<p></p>
+				<p><strong>Внимание: сейчас мы пишем код в спрайте пули!</strong></p>
+               <p>Шаг 1: Чтобы пуля зарядилась в автомат, достаточно сделать так, чтобы пуля оказалась в том же месте, что и сам котенок. То есть нам нужно сделать так, чтобы спрайт пульки перешел прямо в спрайт котенка. Здесь нам поможет блок "Перейти в":</p>
+               <img src=../../static/images/help/go-to-block.png>
+               <p>Добавим его в нашу программу и сменим "указатель мыши" на название спрайта котенка</p>
+               <p><img src=../../static/images/help/shooter-s4-i2.gif></p>
+
+				<p></p>
+				<p>Шаг 2: Блок "Повернуться в направлении" умеет поворачивать нас в определенную сторону. Нам нужно сделать так чтобы он поворачивал нас не просто вправо или влево, а именно туда, куда смотрит котенок. То есть нам нужно взять направление котенка и присвоить его направлению пули. Чтобы мы могли получить информацию о другом спрайте, такую как направление, нам понадобится специальный блок "от"</p>
+				<spanp class=reminder>Блок "от" умеет получать не только направление, но и много чего еще. Нажмите на этот блок правой кнопкой и кликните на "справка", чтобы узнать о нем больше.</spanp>
+				<p><img src=../../static/images/help/shooter-s4-i3.gif></p>
+
+				<p>Шаг 3: Блок "Идти ? шагов" позволит сделать движение пули. Но это движение должно продолжаться лишь то тех пор, пока она не встретит край экрана. Сделать это нам поможет блок цикла "повторять пока не ?":</p>
+				<p><img src=../../static/images/help/shooter-s4-i4.gif></p>
+
+				<div class=accordion id=vptip-menu-accordion>
+               <div class=accordion-group>
+                  <h3 class="accordion-heading collapsed" data-toggle=collapse data-parent=#vptip-menu-accordion data-target=.step-index>А почему бы не использовать цикл "всегда"?</h3>
+                  <div class="step-index accordion-body collapse">
+                     <ul class=inner>
+						<p>Цикл "всегда" хорош в тех случаях, когда он должен выполяться бесконечно на протяжении всей программы. Тут мы должны повторять цикл лишь до того, пока пуля не коснется края экрана. Если вы используете тут цикл "всегда", то котенок сможет сделать только 1 выстрел, после чего выстрелы делаться не будут. Почему? А потому что блок "когда клавиша пробел нажата" не начнет свою работу, пока цикл в нем еще не закончен. Если мы используем "всегда", то цикл никогда не прекратиться, а значит - выстрелов больше не будет. Чтобы этого не допустить, мы используем цикл "повторять пока не".</p>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+            <p>Вот и все! Наша стрельба готова... Но ее можно сделать еще лучше. Сейчас котенок не может стрелять больше одной пули за раз. Мы может исправить это и превратить оружие котенка в настоящий пулемет, используя блок клонирования.</p>
+
+
+            </div>
+            <div class="steps last">
+               <a class=next-step-button href=shooter5.html>Вперед, улучшим наш автомат!</a>
+            </div>
+            <div class=scroll-gradient></div>
+         </div>
+      </div>
+      <script type=text/javascript>
+         var Scratch = Scratch || {};
+         Scratch.INIT_DATA = Scratch.INIT_DATA || {};
+         Scratch.INIT_DATA.COI = {
+           TARGET_DOMAIN: "http://scratch.mit.edu"
+         };
+      </script> <script type=text/javascript src=../../static/js/lib/json2.js></script> <script type=text/javascript src=../../static/js/lib/underscore-min.js></script> <script type=text/javascript src=../../static/js/lib/backbone-min.js></script> <script type=text/javascript src=../../static/js/bootstrap-accordion.js></script> <script type=text/javascript src=../../static/js/bootstrap-tab.js></script> <script type=text/javascript src=../../static/js/views/backbone-extensions.js></script> <script type=text/javascript src=../../static/js/views/cross-origin-interface.js></script> <script type=text/javascript src=../../static/js/views/tips.js></script> <script type=text/javascript>
+         /* Initialize progress bar and navcenter translation */
+         $(function($){
+           $(document).on('click', '#tutorial-menu-icon', function() {
+               $('.tutorial-dropdown-menu nav ul').toggle();
+               if ($('#tutorial-menu-icon').hasClass('dropdown-opened')) {
+                   $('#tutorial-menu-icon').removeClass('dropdown-opened');
+                   $('#tutorial-menu-icon').addClass('dropdown-closed');
+               } else {
+                   $('#tutorial-menu-icon').removeClass('dropdown-closed');
+                   $('#tutorial-menu-icon').addClass('dropdown-opened');
+               }
+           })
+         });
+      </script>
+   </body>
+</html>
+

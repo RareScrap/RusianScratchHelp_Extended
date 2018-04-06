@@ -1,0 +1,159 @@
+<html>
+   <head>
+      <meta charset=utf-8>
+      <link href=../../static/css/base.css rel=stylesheet>
+      <link href=../../static/css/modules/bootstrap-accordion.css rel=stylesheet>
+      <link href=../../static/css/pages/help.css rel=stylesheet>
+      <link href=../../static/css/modules/tabs.css rel=stylesheet>
+      <link href=../../static/css/modules/icons.css rel=stylesheet>
+      <link href=../../static/css/pages/tips.css rel=stylesheet>
+      <link href=../../static/css/modules/tip-bar.css rel=stylesheet>
+      <script type=text/javascript src=../../static/js/jquery.min.js></script>
+   </head>
+   <body id=tips-standalone class>
+      <div id=tip-content>
+         <div class=multi-step>
+            <div class="progress-bar in-progress"> <span id=tip-progress-bar style=width:10%></span> </div>
+            <div class=tutorial-dropdown-menu-bar>
+               <h3 class=tutorial-menu-name> <a href=shooter-intro.html>Создаем стрелялку</a> </h3>
+               <div class=tutorial-dropdown-menu>
+                  <nav>
+                     <a href=#.html id=tutorial-menu-icon class=dropdown-closed></a>
+                     <ul style=display:none;>
+                        <li class=page-link>
+                           <a href=vptip1.html>
+                              <div class="index-num active">1</div>
+                              Нарисуем оружие
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter2.html>
+                              <div class="index-num ">2</div>
+                              Добавим оружие к котенку
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter3.html>
+                              <div class="index-num ">3</div>
+                              Нарисуем пулю
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter4.html>
+                              <div class="index-num ">4</div>
+                              Запрограммируем стрельбу пули
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter5.html>
+                              <div class="index-num ">5</div>
+                              Превращаем оружие в пулемет
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter6.html>
+                              <div class="index-num ">6</div>
+                              Добавляем врага
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter7.html>
+                              <div class="index-num ">7</div>
+                              Изменяем размер врага
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter8.html>
+                              <div class="index-num ">8</div>
+                              Создаем армию врагов
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=vptip9.html>
+                              <div class="index-num ">9</div>
+                              Monitor Your Pet
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=vptip10.html>
+                              <div class="index-num ">10</div>
+                              Share Your Pet
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+            <div class=navcenter> <span class="navigate back"> <a href=shooter2.html><img src=../../static/images/help/tip-arrow-back.png>Назад</a> </span> <span class="navigate next"> <a href=shooter4.html> Дальше <img src=../../static/images/help/tip-arrow-forward.png> </a> </span> </div>
+            <h2>Нарисуем пулю</h2>
+            <div class=steps>
+               <p>Создайте новый спрайт, нажав на <img class=intext src=../../static/images/help/10c-sprite.png> и нарисуйте в нем вот такую пулю (или любую другую на свой вкус). Сделайте ее достаточно маленькой, чтобы она могла поместиться в ствол автомата.</p>
+				<p><img src=../../static/images/help/shooter-s3-i1.png width="291"></p>
+
+				<p> Теперь нужно выставить центр пули. Если вы этого не сделаете, то пуля будет вылетать не из свола автомата, а из совершенно случайного места. Чтобы выставить спрайту центр, перейдите в костюм пули и нажмите на кнопку <img class=intext src=../../static/images/help/center-tool.png> и щелкните в центре пульки</p>
+				<p><img src=../../static/images/help/shooter-s3-i2.gif></p>
+				<p><strong>ВАЖНО:</strong> когда закончите выставлять центр, выберете инструмент "Кисточка" или любой другой. Это нужно для того, чтобы отключитлся режим выставления центра, потому что повторное нажатие на кнопку <img class=intext src=../../static/images/help/center-tool.png> не отключает его.</p>
+
+				<spanp class=reminder>Старайтесь сразу же выставлять центр после рисования костюмов и спрайтов. Это убережет вас от непонятных ошибок.</spanp>
+
+				<div class=accordion id=vptip-menu-accordion>
+               <div class=accordion-group>
+                  <h3 class="accordion-heading collapsed" data-toggle=collapse data-parent=#vptip-menu-accordion data-target=.step-index>Зачем вообще нужен этот "центр"?</h3>
+                  <div class="step-index accordion-body collapse">
+                     <ul class=inner>
+						<p>Помните блок этот блок? </p>
+						<img src=../../static/images/help/go-to-block.png>
+						<p>Он умеет перемещать разные спрайты не только в указатель мыши, но и в ЦЕНТР любого другого спрайта.</p>
+
+						<p>Кроме того, помните что у каждого спрайта есть X (икс) и Y (игрек)? Так вот дело в том, что X и Y спрайта всегда указывают на его ЦЕНТР</p>
+
+						<p>Так же центр влияет на вращение. Вот так котенок будет крутиться, если центр установлен прямо в нем.</p>
+						<img src=../../static/images/help/shooter-s3-i3.gif>
+
+						<p>А вот так, если центр установлен прямо над головой котенка</p>
+						<img src=../../static/images/help/shooter-s3-i4.gif>
+						<p>Как видите, центр играет большую роль в поведении спрайта. Поэтому не нужно забывать о нем.</p>
+
+                     </ul>
+                  </div>
+               </div>
+
+				<p></p>
+               <p>Чтобы пуля вылетала из ствола автомата, давайте выставим нужный центр и котенку. Сделайте это сами, только помните, что ГОРИЗОНТАЛЬНАЯ линия центра должны выходить прямо из ствола, а ВЕРТИКАЛЬНАЯ проходить посередине котенка</p>
+               <p><img src=../../static/images/help/shooter-s3-i5.png width="291"></p>
+
+               <p>Вот мы и подготовили наши спрайты. Самое время их запрограммировать!</p>
+            </div>
+
+
+            </div>
+            <div class="steps last">
+               <a class=next-step-button href=shooter4.html>Дальше, запрограммируем пулю</a>
+            </div>
+            <div class=scroll-gradient></div>
+         </div>
+      </div>
+      <script type=text/javascript>
+         var Scratch = Scratch || {};
+         Scratch.INIT_DATA = Scratch.INIT_DATA || {};
+         Scratch.INIT_DATA.COI = {
+           TARGET_DOMAIN: "http://scratch.mit.edu"
+         };
+      </script> <script type=text/javascript src=../../static/js/lib/json2.js></script> <script type=text/javascript src=../../static/js/lib/underscore-min.js></script> <script type=text/javascript src=../../static/js/lib/backbone-min.js></script> <script type=text/javascript src=../../static/js/bootstrap-accordion.js></script> <script type=text/javascript src=../../static/js/bootstrap-tab.js></script> <script type=text/javascript src=../../static/js/views/backbone-extensions.js></script> <script type=text/javascript src=../../static/js/views/cross-origin-interface.js></script> <script type=text/javascript src=../../static/js/views/tips.js></script> <script type=text/javascript>
+         /* Initialize progress bar and navcenter translation */
+         $(function($){
+           $(document).on('click', '#tutorial-menu-icon', function() {
+               $('.tutorial-dropdown-menu nav ul').toggle();
+               if ($('#tutorial-menu-icon').hasClass('dropdown-opened')) {
+                   $('#tutorial-menu-icon').removeClass('dropdown-opened');
+                   $('#tutorial-menu-icon').addClass('dropdown-closed');
+               } else {
+                   $('#tutorial-menu-icon').removeClass('dropdown-closed');
+                   $('#tutorial-menu-icon').addClass('dropdown-opened');
+               }
+           })
+         });
+      </script>
+   </body>
+</html>
+

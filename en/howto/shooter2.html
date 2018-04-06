@@ -1,0 +1,176 @@
+<html>
+   <head>
+      <meta charset=utf-8>
+      <link href=../../static/css/base.css rel=stylesheet>
+      <link href=../../static/css/modules/bootstrap-accordion.css rel=stylesheet>
+      <link href=../../static/css/pages/help.css rel=stylesheet>
+      <link href=../../static/css/modules/tabs.css rel=stylesheet>
+      <link href=../../static/css/modules/icons.css rel=stylesheet>
+      <link href=../../static/css/pages/tips.css rel=stylesheet>
+      <link href=../../static/css/modules/tip-bar.css rel=stylesheet>
+      <script type=text/javascript src=../../static/js/jquery.min.js></script>
+   </head>
+   <body id=tips-standalone class>
+      <div id=tip-content>
+         <div class=multi-step>
+            <div class="progress-bar in-progress"> <span id=tip-progress-bar style=width:10%></span> </div>
+            <div class=tutorial-dropdown-menu-bar>
+               <h3 class=tutorial-menu-name> <a href=shooter-intro.html>Создаем стрелялку</a> </h3>
+               <div class=tutorial-dropdown-menu>
+                  <nav>
+                     <a href=#.html id=tutorial-menu-icon class=dropdown-closed></a>
+                     <ul style=display:none;>
+                        <li class=page-link>
+                           <a href=vptip1.html>
+                              <div class="index-num active">1</div>
+                              Нарисуем оружие
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter2.html>
+                              <div class="index-num ">2</div>
+                              Добавим оружие к котенку
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter3.html>
+                              <div class="index-num ">3</div>
+                              Нарисуем пулю
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter4.html>
+                              <div class="index-num ">4</div>
+                              Запрограммируем стрельбу пули
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter5.html>
+                              <div class="index-num ">5</div>
+                              Превращаем оружие в пулемет
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter6.html>
+                              <div class="index-num ">6</div>
+                              Добавляем врага
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter7.html>
+                              <div class="index-num ">7</div>
+                              Изменяем размер врага
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=shooter8.html>
+                              <div class="index-num ">8</div>
+                              Создаем армию врагов
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=vptip9.html>
+                              <div class="index-num ">9</div>
+                              Monitor Your Pet
+                           </a>
+                        </li>
+                        <li class=page-link>
+                           <a href=vptip10.html>
+                              <div class="index-num ">10</div>
+                              Share Your Pet
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+            <div class=navcenter> <span class="navigate back"> <a href=shooter1.html><img src=../../static/images/help/tip-arrow-back.png>Назад</a> </span> <span class="navigate next"> <a href=shooter3.html> Дальше <img src=../../static/images/help/tip-arrow-forward.png> </a> </span> </div>
+            <h2>Добавим оружие к котенку</h2>
+            <div class=steps>
+               <p>Сейчас у нас имеет 2 спрайта - котенок и автомат</p>
+               <p><img src=../../static/images/help/shooter-s2-i1.png width="291"></p>
+               <p>Но так как котенок держит автомат в руках, то он является частью костюма котенка. Значит, нам нужно добавить автомат прямо в костюм котенка.</p>
+
+               <div class=accordion id=vptip-menu-accordion>
+               <div class=accordion-group>
+                  <h3 class="accordion-heading collapsed" data-toggle=collapse data-parent=#vptip-menu-accordion data-target=.step-index>Почему нельзя просто оставить автомат как отдельный спрайт?</h3>
+                  <div class="step-index accordion-body collapse">
+                     <ul class=inner>
+						Помните, что предметы в ваше игре оформляются как отдельные спрайты для того, чтобы у них был свой собственных код, свои костюмы и свои звуки. Если вы не можете понять, как нужно поступить: сделать картинку в виде спрайта или в виде части к чужому костюму, подумайте вот над чем
+					    <ul>
+							<li><spanp class=reminder>У моей картинки должен быть свой собственный код?</spanp></li>
+							<li><spanp class=reminder>Другие спрайты должны взаимодействовать именно с моей картинкой?</spanp></li>
+					    </ul>
+					    Если вы ответили нет на все, значит вам следует сделать вашу картинку частью чужого костюма
+                     </ul>
+                  </div>
+               </div>
+			   <p></p>
+
+
+               <p>Зажмем левой кнопкой мыши наш костюм с автоматом и перенесем его прямо на спрайт котенка в меню спрайтов</p>
+               <p><img src=../../static/images/help/shooter-s2-i2.gif></p>
+
+               <p>Теперь у нас появилось на экране 2 автомата. Не волнуйтесь, теперь вы можете удалить спрайт с нарисованным автоматом. Он нам больше не нужен, так как мы перенесли автомат в самого котенка.</p>
+			   <p><img src=../../static/images/help/shooter-s2-i3.gif></p>
+
+			   <p>Теперь откройте костюмы котенка. У вас должно быть 3 костюма: котенок обычный, котенок бегущий и автомат. Удалите бегущего котенка, оставив в костюмах только автомат и обычного котенка</p>
+				<p><img src=../../static/images/help/shooter-s2-i4.gif></p>
+
+				<p>Теперь у нас есть 2 костюма: сам котенок и автомат. Нам нужно их совместить, чтобы было видно как котенок держит оружие в руках. Чтобы это сделать, кликните на котенка, чтобы он появился в режиме рисования, зажмите левой кнопкой костюм с автоматом и просто перетащите на котенка</p>
+
+				<div class=accordion id=vptip-menu-accordion>
+               <div class=accordion-group>
+                  <h3 class="accordion-heading collapsed" data-toggle=collapse data-parent=#vptip-menu-accordion data-target=.step-index>Полезный совет! (тык)</h3>
+                  <div class="step-index accordion-body collapse">
+                     <ul class=inner>
+						<spanp class=reminder>Совет: если вы находитесь в режиме веторной графики, то вам будет очень легко снова выделить объект, если вы вдруг ошибетесь и кликните не туда. В режиме растровой графики в случае ошибки вам придется при помощи инструмента "Выделение" снова выделить ваш автомат и продолжить работу, что иногда может быть проблематично. Чтобы сделать работу удобнее, переключитесь на кнопку "Конвентировать в векторную графику" и только после этого продолжайте следовать инструкции. Если этой кнопки у вас нет, значит что вы уже в режиме векторной графики!</spanp>
+						<p><img src=../../static/images/help/shooter-s2-i5.png width="270"></p>
+                     </ul>
+                  </div>
+               </div>
+
+				<p></p>
+               <p>Не забудте выбрать стрелочку (если у вас векторная графика) и кликнуть по автомату. Если у вас растровая графика, то автомат уже будет выбран. Потяните за уголок выделения чтобы уменьшить или увеличить автомат. Потом зажмите левой кнопкой мыши серединку автомата и перетащите его в руки котенка</p>
+				 <strong>Чтобы автомат появился в руках котенка на экране игры, кликните один раз по свободной области в режиме рисования!</strong>
+				 <p></p>
+				 <p><img src=../../static/images/help/shooter-s2-i5.gif></p>
+
+				 <p>Удалим костюм автомата, потому что больше в нем нет нужды</p>
+				 <p><img src=../../static/images/help/shooter-s2-i6.gif></p>
+
+				 <p>Вот и мы и закончили с рисование автомата. Осталось только нарисовать пулю...</p>
+            </div>
+
+
+            </div>
+            <div class="steps last">
+               <a class=next-step-button href=shooter3.html>Дальше, нарисуем пульку</a>
+            </div>
+            <div class=scroll-gradient></div>
+         </div>
+      </div>
+      <script type=text/javascript>
+         var Scratch = Scratch || {};
+         Scratch.INIT_DATA = Scratch.INIT_DATA || {};
+         Scratch.INIT_DATA.COI = {
+           TARGET_DOMAIN: "http://scratch.mit.edu"
+         };
+      </script> <script type=text/javascript src=../../static/js/lib/json2.js></script> <script type=text/javascript src=../../static/js/lib/underscore-min.js></script> <script type=text/javascript src=../../static/js/lib/backbone-min.js></script> <script type=text/javascript src=../../static/js/bootstrap-accordion.js></script> <script type=text/javascript src=../../static/js/bootstrap-tab.js></script> <script type=text/javascript src=../../static/js/views/backbone-extensions.js></script> <script type=text/javascript src=../../static/js/views/cross-origin-interface.js></script> <script type=text/javascript src=../../static/js/views/tips.js></script> <script type=text/javascript>
+         /* Initialize progress bar and navcenter translation */
+         $(function($){
+           $(document).on('click', '#tutorial-menu-icon', function() {
+               $('.tutorial-dropdown-menu nav ul').toggle();
+               if ($('#tutorial-menu-icon').hasClass('dropdown-opened')) {
+                   $('#tutorial-menu-icon').removeClass('dropdown-opened');
+                   $('#tutorial-menu-icon').addClass('dropdown-closed');
+               } else {
+                   $('#tutorial-menu-icon').removeClass('dropdown-closed');
+                   $('#tutorial-menu-icon').addClass('dropdown-opened');
+               }
+           })
+         });
+      </script>
+   </body>
+</html>
+
