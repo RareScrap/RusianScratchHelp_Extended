@@ -1,7 +1,49 @@
-<html> <head><meta charset=utf-8><link href=../../static/css/base.css rel=stylesheet><link href=../../static/css/modules/bootstrap-accordion.css rel=stylesheet><link href=../../static/css/pages/help.css rel=stylesheet><link href=../../static/css/modules/tabs.css rel=stylesheet><link href=../../static/css/modules/icons.css rel=stylesheet><link href=../../static/css/pages/tips.css rel=stylesheet><link href=../../static/css/modules/tip-bar.css rel=stylesheet><script type=text/javascript src=../../static/js/jquery.min.js></script></head> <body id=tips-standalone class> <div id=tip-content> <div class=header> <img src=../../static/images/help/item-of-list.png> <h3>Reports the item at the specifed position in the list</h3> </div> <div class=example> You can specify which item to report by choosing from the pull-down menu or typing in a number. Choosing "random" reports a random item in the list. </div> <div class=example> <img src=../../static/images/help/item-of-list-ex.png> </div> <p> The item block reports the value of the item at the specified place on the list. <br><img src=../../static/images/help/item-of-list-menu.png><br> You can fit an item block into other blocks, for example: say, switch to costume, play sound, or broadcast. </p> </div> <script type=text/javascript>
-      var Scratch = Scratch || {};
-      Scratch.INIT_DATA = Scratch.INIT_DATA || {};
-      Scratch.INIT_DATA.COI = {
-        TARGET_DOMAIN: "http://scratch.mit.edu"
-      };
-    </script> <script type=text/javascript src=../../static/js/lib/json2.js></script> <script type=text/javascript src=../../static/js/lib/underscore-min.js></script> <script type=text/javascript src=../../static/js/lib/backbone-min.js></script> <script type=text/javascript src=../../static/js/bootstrap-accordion.js></script> <script type=text/javascript src=../../static/js/bootstrap-tab.js></script> <script type=text/javascript src=../../static/js/views/backbone-extensions.js></script> <script type=text/javascript src=../../static/js/views/cross-origin-interface.js></script> <script type=text/javascript src=../../static/js/views/tips.js></script> </body> </html>
+<html>
+   <head>
+      <meta charset=utf-8>
+      <link href=../../static/css/base.css rel=stylesheet>
+      <link href=../../static/css/modules/bootstrap-accordion.css rel=stylesheet>
+      <link href=../../static/css/pages/help.css rel=stylesheet>
+      <link href=../../static/css/modules/tabs.css rel=stylesheet>
+      <link href=../../static/css/modules/icons.css rel=stylesheet>
+      <link href=../../static/css/pages/tips.css rel=stylesheet>
+      <link href=../../static/css/modules/tip-bar.css rel=stylesheet>
+      <script type=text/javascript src=../../static/js/jquery.min.js></script>
+   </head>
+   <body id=tips-standalone class>
+      <div id=tip-content>
+         <div class=header>
+            <img src=../../static/images/help/item-of-list.png>
+            <h3>Возвращает элемент в указанной позиции из определенного списка. Если длина списка меньше, чем указанный элемент - вернет пустую строку.</h3>
+         </div>
+         <div class=example> Есть 3 способа указать какой элемент вам нужен:
+			<ol>
+				<li>Напечатать номер элемента самому</li>
+				<li>
+					Нажать на черную стрелочку и выбрать один из предопределенных вариантов: 1 (первый элемент), последний (последний элемент в списке) или случайное (абсолютно любой элемент списка).
+					<br><img src=../../static/images/help/item-of-list-menu.png><br>
+				</li>
+				<li>Поставить переменную</li>
+			</ol>
+         </div>
+         <div class=example>
+			 <p>Пример 1: Если у вас есть список разных фраз, можно заставить нащ спрайт говорить любую из них. Он сам решит, что сказать:</p>
+			 <img src=../../static/images/help/item-of-list-ex1.png>
+
+			<p></p>
+			 <p>Пример 2: Предположим, что у нас есть список в котором хранятся рекорды других игроков в порядке убывания очков. На первом месте в списке находится имя игрока, который набрал больше всех очков, а на последнем - результат самого худшего игрока. Если игрок наберет очков больше, чем самый лучший игрок, мы должны его поздравить :)</p>
+			 <img src=../../static/images/help/item-of-list-ex2.png>
+		</div>
+
+         <p> Не забывайте, что этот блок - круглый. Это значит, что вы можете вставить его в другие блоки, например, в "передать сообщение", "сменить костюм", "сказать", "играть звук" и так далее. <img src=../../static/images/help/other-block-and-item-of-list.png width=291></p>
+      </div>
+      <script type=text/javascript>
+         var Scratch = Scratch || {};
+         Scratch.INIT_DATA = Scratch.INIT_DATA || {};
+         Scratch.INIT_DATA.COI = {
+           TARGET_DOMAIN: "http://scratch.mit.edu"
+         };
+      </script> <script type=text/javascript src=../../static/js/lib/json2.js></script> <script type=text/javascript src=../../static/js/lib/underscore-min.js></script> <script type=text/javascript src=../../static/js/lib/backbone-min.js></script> <script type=text/javascript src=../../static/js/bootstrap-accordion.js></script> <script type=text/javascript src=../../static/js/bootstrap-tab.js></script> <script type=text/javascript src=../../static/js/views/backbone-extensions.js></script> <script type=text/javascript src=../../static/js/views/cross-origin-interface.js></script> <script type=text/javascript src=../../static/js/views/tips.js></script>
+   </body>
+</html>
+
